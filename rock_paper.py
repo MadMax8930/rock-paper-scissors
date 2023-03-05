@@ -19,6 +19,22 @@ while True:
     ordi_pick = options[randomIndex]
     print(f"Computer picked {ordi_pick}.")
 
+    if user_choice == "rock" and ordi_pick == "scissors":
+        print("You won!")
+        user_wins += 1
+    elif user_choice == "paper" and ordi_pick == "rock":
+        print("You won!")
+        user_wins += 1
+    elif user_choice == "scissors" and ordi_pick == "paper":
+        print("You won!")
+        user_wins += 1
+    elif user_choice == ordi_pick:
+        print("Draw")
+    else:
+        print("You lost!")
+        ordi_wins += 1
 
+print('You won', user_wins, 'times.')
+print('The computer won', ordi_wins, 'times.')
 print("Goodbye!")
 
